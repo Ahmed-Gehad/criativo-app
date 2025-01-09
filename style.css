@@ -34,7 +34,10 @@ nav {
     background-color: var(--dark-gray);
     display: flex;
     justify-content: space-between;
-
+    text-transform: uppercase;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
 
 nav img {
@@ -47,7 +50,7 @@ nav a {
     color: white;
     padding: 15px;
     font-size: 20px;
-
+    transition: all .4s ease;
 }
 
 nav a:hover {
@@ -61,14 +64,16 @@ nav .list {
     align-items: center;
 }
 
-nav a i {
+nav i {
     color: var(--aqua);
     margin-right: 80px;
     padding-left: 20px;
+    transition: all .4s ease;
 }
 
-nav a i:hover {
-    color: white;
+nav i:hover{
+    color: white !important;
+    cursor: pointer;
 }
 
 /*------------------- End Navbar ------------*/
@@ -77,31 +82,26 @@ nav a i:hover {
 .header {
     display: flex;
     background-color: #000000;
-    height: 74vh;
-    position: relative;
     background: linear-gradient(to left, rgb(12 54 51), rgb(0, 0, 0));
-    z-index: 1;
-
+   position: relative;
+   padding-top: 90px;
 }
-
-
 .header img {
-    margin-top: -150px;
-    height: 600px;
-    width: 580px;
+    width: 100%;
     opacity: .7;
+    height: 100%;
+    padding-top: 20px;
 }
+
 
 .header .info {
     color: white;
     align-items: center;
     width: 80%;
-    margin-left: 100px;
-
+    padding-left: 100px;
 }
-
 .header .info h1 {
-    font-size: 70px;
+    font-size: 60px;
     width: 100%;
 }
 
@@ -135,6 +135,7 @@ span {
     margin-top: 30px;
     display: flex;
     align-items: center;
+    padding-bottom: 30px;
 }
 
 .header .under-header h4 {
@@ -153,10 +154,12 @@ span {
     border-radius: 50%;
     margin-right: 30px;
     position: relative;
+    transition: all .5s ease-in-out;
 }
 
-.header .under-header .play:hover {
+.header .under-header .play:hover{
     background-color: transparent;
+    cursor: pointer;
 }
 
 .header .under-header .play i {
@@ -209,6 +212,8 @@ span {
     font-weight: 700;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
 }
 
 .services button a {
@@ -297,6 +302,10 @@ span {
 .about .U-about img {
     width: 70px;
     margin: -10px 15px 10px 10px;
+    transition: all 0.5s ease-in-out;
+}
+.about  .UU-about:hover img{
+    padding-top: 20px;
 }
 
 .about .UU-about {
@@ -347,8 +356,12 @@ span {
 
 .project img {
     width: 400px;
+    filter: brightness(0.5);
+    transition: all 0.5s ease;
 }
-
+.project img:hover {
+    filter: brightness(1);
+}
 .project .top-project {
     display: flex;
     margin-right: -6px;
@@ -398,6 +411,7 @@ span {
 .second-slide-bar img {
     width: 200px;
     filter: grayscale(100%);
+    transition: all 0.5s ease-in-out;
 }
 
 .second-slide-bar img:hover {
@@ -453,6 +467,7 @@ span {
     text-align: center;
     padding-top: 4px;
     transition: all .5s ease;
+    
 }
 
 .experience i:hover {
@@ -483,6 +498,7 @@ span {
     top: 40%;
     left: 40%;
     z-index: 299999;
+    cursor: pointer;
 }
 
 .experience .play-b i {
@@ -496,6 +512,7 @@ span {
     text-align: center;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
 
 }
 
@@ -504,6 +521,7 @@ span {
     top: 35%;
     left: 35%;
     z-index: 299999;
+    cursor: pointer;
 }
 
 .experience .play-a i {
@@ -517,6 +535,7 @@ span {
     text-align: center;
     align-items: center;
     justify-content: center;
+    font-size: 30px;
 }
 
 /* ---------------------END Experience------------------ */
